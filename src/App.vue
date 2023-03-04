@@ -1,26 +1,41 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+	<div>
+		<month-gallery/>
+
+		<currencies-widget/>
+
+		<balance-widget/>
+	</div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import MonthGallery from '@/components/MonthGallery'
+import CurrenciesWidget from '@/components/CurrenciesWidget'
+import BalanceWidget from '@/components/BalanceWidget'
 
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
+	name: 'App',
+	components: { MonthGallery, CurrenciesWidget, BalanceWidget }
 }
 </script>
 
-<style>
+<style lang="scss">
+@import '@/assets/scss/vars.scss';
+* {
+	outline: none;
+	text-decoration: none;
+	color: $lightTextColor;
+}
+body {
+background-color: #121217;
+}
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+	
+	font-family: Avenir, Helvetica, Arial, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-align: center;
+	color: #2c3e50;
+	margin-top: 60px;
 }
 </style>
